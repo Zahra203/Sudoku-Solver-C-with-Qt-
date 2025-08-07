@@ -1,28 +1,41 @@
-# Sudoku-Solver-C-with-Qt
-This project is a GUI-based Sudoku Solver built using **C++ and Qt Framework**, designed to solve 4x4 Sudoku puzzles using a **backtracking algorithm**. The application provides a clean, user-friendly interface where users can input puzzle values, solve the puzzle, or reset for a new one.
-## 🎯 Objective
-To learn Docker by practically working with containers and images. This includes:
-- Installing Docker and Python
-- Customizing an image with utilities like `curl`, `git`, and `python3`
-- Running a Python script inside a container
-- Exposing the container to the host
+## 🧠 Introduction
 
-## ⚙️ Installation
+The goal of this project is to create a Sudoku-solving application that uses a **backtracking algorithm** and provides an intuitive GUI using Qt. It is capable of validating user input and solving incomplete Sudoku puzzles entered by the user.
 
-Install the following tools:
-- Docker
-- Python 3 and pip
+## ⚙️ Working
 
-## 🛠️ Customization of Docker Image
+- Initializes the application window with Qt
+- Accepts user input through a 4x4 grid of text fields
+- Solves the puzzle using a backtracking algorithm
+- Displays results or warns the user if unsolvable
+- Offers "Solve More" and "Exit" options
 
-Added the following to the base image:
-- `curl`
-- `git`
-- `python3` and `pip`
+## 📌 Functional Requirements
 
-## 🏗️ Building Docker Image
+- 4x4 input grid (accepts numbers 1–4)
+- Solve button (triggers solving)
+- Solve More button (resets the grid)
+- Exit button (closes the app)
+- Error handling for invalid inputs and unsolvable puzzles
+- Dynamic memory management to avoid leaks
 
-Created a custom Docker image after making modifications inside the running container using:
+## 💻 How It Works
 
-```bash
-docker commit <container_id> student/ubuntu_custom
+1. User inputs the puzzle (leave blank for empty cells)
+2. App validates inputs and runs the solver
+3. Backtracking logic searches for valid combinations
+4. Results are displayed in the same grid
+5. Memory cleanup after each solve
+
+## 📤 Output
+
+- Solved Sudoku displayed in the grid
+- Pop-up alert for invalid or unsolvable puzzles
+- GUI updates dynamically based on button clicks
+
+## 🧰 Technologies Used
+
+- **C++**
+- **Qt Framework (Widgets, Layouts, QPushButton, QLineEdit, QLabel)**
+- **Backtracking Algorithm**
+- **QApplication, QMessageBox, QGridLayout**
